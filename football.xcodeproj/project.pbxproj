@@ -16,6 +16,8 @@
 		617529752A5B842B00AE7C6D /* footballUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617529742A5B842B00AE7C6D /* footballUITestsLaunchTests.swift */; };
 		617529832A5B846A00AE7C6D /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 617529822A5B846A00AE7C6D /* APIKit */; };
 		61ED98D42A75642B00060406 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D32A75642B00060406 /* api.swift */; };
+		61ED98D72A76700000060406 /* TeamsInteractorCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D62A76700000060406 /* TeamsInteractorCombine.swift */; };
+		61ED98D92A7670D700060406 /* TeamsViewCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D82A7670D700060406 /* TeamsViewCombine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		617529722A5B842B00AE7C6D /* footballUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footballUITests.swift; sourceTree = "<group>"; };
 		617529742A5B842B00AE7C6D /* footballUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footballUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		61ED98D32A75642B00060406 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
+		61ED98D62A76700000060406 /* TeamsInteractorCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsInteractorCombine.swift; sourceTree = "<group>"; };
+		61ED98D82A7670D700060406 /* TeamsViewCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewCombine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		617529552A5B842A00AE7C6D /* football */ = {
 			isa = PBXGroup;
 			children = (
+				61ED98D52A766FE400060406 /* combine */,
 				617529562A5B842A00AE7C6D /* footballApp.swift */,
 				617529582A5B842A00AE7C6D /* ContentView.swift */,
 				6175295A2A5B842B00AE7C6D /* Assets.xcassets */,
@@ -140,6 +145,15 @@
 				61ED98D32A75642B00060406 /* api.swift */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		61ED98D52A766FE400060406 /* combine */ = {
+			isa = PBXGroup;
+			children = (
+				61ED98D62A76700000060406 /* TeamsInteractorCombine.swift */,
+				61ED98D82A7670D700060406 /* TeamsViewCombine.swift */,
+			);
+			path = combine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				617529592A5B842A00AE7C6D /* ContentView.swift in Sources */,
+				61ED98D92A7670D700060406 /* TeamsViewCombine.swift in Sources */,
+				61ED98D72A76700000060406 /* TeamsInteractorCombine.swift in Sources */,
 				61ED98D42A75642B00060406 /* api.swift in Sources */,
 				617529572A5B842A00AE7C6D /* footballApp.swift in Sources */,
 			);

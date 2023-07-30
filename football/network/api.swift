@@ -7,6 +7,8 @@
 
 import Foundation
 import APIKit
+import Combine
+
 
 // APIリクエスト用のクラス
 class TeamsAPI {
@@ -27,6 +29,30 @@ class TeamsAPI {
             case .failure(let error):
                 print("Error fetching teams: \(error)")
                 completion(nil)
+            }
+        }
+    }
+}
+
+class TeamsAPICombine {
+    private let baseURL: URL = URL(string: "https://api.football-data.org/v4/")!
+
+    private let apiKey = ""
+
+
+    // チーム情報取得APIリクエスト
+    func fetchTeams() -> Future<[Team], Error> {
+        let request = TeamsRequest(baseURL: baseURL, apiKey: apiKey)
+
+        // Use Combine's Future to handle the API request
+        return Future { promise in
+            Session.send(request) { result in
+                switch result {
+                case .success(let response):
+                    promise(.success(response.teams))
+                case .failure(let error):
+                    promise(.failure(error))
+                }
             }
         }
     }

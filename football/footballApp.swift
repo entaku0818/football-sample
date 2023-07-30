@@ -11,7 +11,24 @@ import SwiftUI
 struct footballApp: App {
     var body: some Scene {
         WindowGroup {
-            TeamsView(presenter: TeamsPresenter(interactor: TeamsInteractor()))
+            MenuView()
+        }
+    }
+}
+
+
+struct MenuView: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                NavigationLink(destination: TeamsView(presenter: TeamsPresenter(interactor: TeamsInteractor()))) {
+                    Text("TeamsView")
+                }
+                NavigationLink(destination: TeamsViewCombine(presenter: TeamsPresenterCombine(interactor: TeamsInteractorCombine()))) {
+                    Text("TeamsViewCombine")
+                }
+            }
+            .navigationTitle("Menu")
         }
     }
 }
