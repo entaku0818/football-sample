@@ -15,6 +15,7 @@
 		617529732A5B842B00AE7C6D /* footballUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617529722A5B842B00AE7C6D /* footballUITests.swift */; };
 		617529752A5B842B00AE7C6D /* footballUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617529742A5B842B00AE7C6D /* footballUITestsLaunchTests.swift */; };
 		617529832A5B846A00AE7C6D /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 617529822A5B846A00AE7C6D /* APIKit */; };
+		61ED98D42A75642B00060406 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D32A75642B00060406 /* api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		6175296E2A5B842B00AE7C6D /* footballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = footballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		617529722A5B842B00AE7C6D /* footballUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footballUITests.swift; sourceTree = "<group>"; };
 		617529742A5B842B00AE7C6D /* footballUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footballUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		61ED98D32A75642B00060406 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				617529562A5B842A00AE7C6D /* footballApp.swift */,
 				617529582A5B842A00AE7C6D /* ContentView.swift */,
 				6175295A2A5B842B00AE7C6D /* Assets.xcassets */,
+				61ED98D22A75641800060406 /* network */,
 				6175295F2A5B842B00AE7C6D /* football.entitlements */,
 				6175295C2A5B842B00AE7C6D /* Preview Content */,
 			);
@@ -129,6 +132,14 @@
 				617529742A5B842B00AE7C6D /* footballUITestsLaunchTests.swift */,
 			);
 			path = footballUITests;
+			sourceTree = "<group>";
+		};
+		61ED98D22A75641800060406 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				61ED98D32A75642B00060406 /* api.swift */,
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				617529592A5B842A00AE7C6D /* ContentView.swift in Sources */,
+				61ED98D42A75642B00060406 /* api.swift in Sources */,
 				617529572A5B842A00AE7C6D /* footballApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
