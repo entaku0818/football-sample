@@ -58,6 +58,49 @@ class TeamsAPICombine {
     }
 }
 
+
+
+class TeamsAPIAsync {
+    private let baseURL: URL = URL(string: "https://api.football-data.org/v4/")!
+    private let apiKey = ""
+
+
+    // APIError enum to handle errors
+    enum APIError: Error {
+        case networkError(Error)
+        case decodingError(Error)
+    }
+
+    // チーム情報取得APIリクエスト
+    func fetchTeams() async throws -> [Team] {
+        let request = TeamsRequest(baseURL: baseURL, apiKey: apiKey)
+
+        do {
+            let response = try await sendRequest(request)
+            return response.teams
+        } catch {
+            throw APIError.networkError(error)
+        }
+    }
+
+    private func sendRequest<T: Request>(_ request: T) async throws -> T.Response {
+        do {
+            return try await withCheckedThrowingContinuation { continuation in
+                Session.send(request) { result in
+                    switch result {
+                    case .success(let response):
+                        continuation.resume(returning: response)
+                    case .failure(let error):
+                        continuation.resume(throwing: APIError.networkError(error))
+                    }
+                }
+            }
+        } catch {
+            throw APIError.decodingError(error)
+        }
+    }
+}
+
 // APIリクエストの定義
 struct TeamsRequest: Request {
 
