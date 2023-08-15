@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61642C882A8B049A00E222AC /* TeamsViewAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61642C872A8B049A00E222AC /* TeamsViewAsync.swift */; };
 		617529572A5B842A00AE7C6D /* footballApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617529562A5B842A00AE7C6D /* footballApp.swift */; };
 		617529592A5B842A00AE7C6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617529582A5B842A00AE7C6D /* ContentView.swift */; };
 		6175295B2A5B842B00AE7C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6175295A2A5B842B00AE7C6D /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61642C872A8B049A00E222AC /* TeamsViewAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewAsync.swift; sourceTree = "<group>"; };
 		617529532A5B842A00AE7C6D /* football.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = football.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		617529562A5B842A00AE7C6D /* footballApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footballApp.swift; sourceTree = "<group>"; };
 		617529582A5B842A00AE7C6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61642C862A8B03DF00E222AC /* async */ = {
+			isa = PBXGroup;
+			children = (
+				61642C872A8B049A00E222AC /* TeamsViewAsync.swift */,
+			);
+			path = async;
+			sourceTree = "<group>";
+		};
 		6175294A2A5B842A00AE7C6D = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		617529552A5B842A00AE7C6D /* football */ = {
 			isa = PBXGroup;
 			children = (
+				61642C862A8B03DF00E222AC /* async */,
 				61ED98D52A766FE400060406 /* combine */,
 				617529562A5B842A00AE7C6D /* footballApp.swift */,
 				617529582A5B842A00AE7C6D /* ContentView.swift */,
@@ -292,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61642C882A8B049A00E222AC /* TeamsViewAsync.swift in Sources */,
 				617529592A5B842A00AE7C6D /* ContentView.swift in Sources */,
 				61ED98D92A7670D700060406 /* TeamsViewCombine.swift in Sources */,
 				61ED98D72A76700000060406 /* TeamsInteractorCombine.swift in Sources */,

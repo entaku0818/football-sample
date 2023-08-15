@@ -27,6 +27,9 @@ struct MenuView: View {
                 NavigationLink(destination: TeamsViewCombine(presenter: TeamsPresenterCombine(interactor: TeamsInteractorCombine()))) {
                     Text("TeamsViewCombine")
                 }
+                NavigationLink(destination: TeamsViewAsync(presenter: TeamsPresenterAsync(interactor: TeamsAPIAsync()))) {
+                    Text("TeamsViewAsync")
+                }
             }
             .navigationTitle("Menu")
         }
