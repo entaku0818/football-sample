@@ -18,7 +18,15 @@ struct TeamsViewAsync: View {
             List(presenter.teams, id: \.id) { team in
                 Text(team.name)
             }
-            .onAppear { presenter.updateView() }
+            .onAppear {
+                Task {
+                  do {
+                      try await presenter.updateView()
+                  } catch {
+                      print("Error fetching teams: \(error)")
+                  }
+                }
+            }
         }
     }
 }
@@ -26,33 +34,22 @@ struct TeamsViewAsync: View {
 
 protocol TeamsPresenterAsyncInterface {
     var teams: [Team] { get }
-    func updateView()
+    func updateView() async throws
 }
 
 class TeamsPresenterAsync: TeamsPresenterAsyncInterface, ObservableObject {
-    @Published var teams = [Team]()
-    private var cancellables: [AnyCancellable] = []
 
+    @Published var teams = [Team]()
     private var interactor: TeamsAPIAsync
 
 
     init(interactor: TeamsAPIAsync) {
-        self.interactor = TeamsAPIAsync()
+        self.interactor = interactor
     }
 
-    func updateView() {
-        Task { [weak self] in
-            guard let self = self else { return }
-
-            do {
-                let fetchedTeams = try await interactor.fetchTeams()
-                await MainActor.run {
-                    self.teams = fetchedTeams
-                }
-            } catch {
-                print("Error fetching teams: \(error)")
-            }
-        }
+    @MainActor
+    func updateView() async throws {
+        self.teams = try await interactor.fetchTeams()
     }
 }
 
