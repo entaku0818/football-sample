@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		61642C882A8B049A00E222AC /* TeamsViewAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61642C872A8B049A00E222AC /* TeamsViewAsync.swift */; };
+		616E87BD2A9B4E8700EEBB83 /* TeamsPresenterAsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E87BB2A9B4DE800EEBB83 /* TeamsPresenterAsyncTests.swift */; };
+		616E87BF2A9B4ED400EEBB83 /* MockTeamsAPIAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E87BE2A9B4ED400EEBB83 /* MockTeamsAPIAsync.swift */; };
 		617529572A5B842A00AE7C6D /* footballApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617529562A5B842A00AE7C6D /* footballApp.swift */; };
 		617529592A5B842A00AE7C6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617529582A5B842A00AE7C6D /* ContentView.swift */; };
 		6175295B2A5B842B00AE7C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6175295A2A5B842B00AE7C6D /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		61642C872A8B049A00E222AC /* TeamsViewAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewAsync.swift; sourceTree = "<group>"; };
+		616E87BB2A9B4DE800EEBB83 /* TeamsPresenterAsyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsPresenterAsyncTests.swift; sourceTree = "<group>"; };
+		616E87BE2A9B4ED400EEBB83 /* MockTeamsAPIAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTeamsAPIAsync.swift; sourceTree = "<group>"; };
 		617529532A5B842A00AE7C6D /* football.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = football.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		617529562A5B842A00AE7C6D /* footballApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footballApp.swift; sourceTree = "<group>"; };
 		617529582A5B842A00AE7C6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				617529682A5B842B00AE7C6D /* footballTests.swift */,
+				616E87BB2A9B4DE800EEBB83 /* TeamsPresenterAsyncTests.swift */,
+				616E87BE2A9B4ED400EEBB83 /* MockTeamsAPIAsync.swift */,
 			);
 			path = footballTests;
 			sourceTree = "<group>";
@@ -316,6 +322,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616E87BD2A9B4E8700EEBB83 /* TeamsPresenterAsyncTests.swift in Sources */,
+				616E87BF2A9B4ED400EEBB83 /* MockTeamsAPIAsync.swift in Sources */,
 				617529692A5B842B00AE7C6D /* footballTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,8 +543,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.entaku.footballTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/football.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/football";
 			};
 			name = Debug;
@@ -554,8 +566,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.entaku.footballTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/football.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/football";
 			};
 			name = Release;

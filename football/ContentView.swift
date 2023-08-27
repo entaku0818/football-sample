@@ -10,7 +10,9 @@ struct TeamsView: View {
             List(presenter.teams, id: \.id) { team in
                 Text(team.name)
             }
-            .onAppear { presenter.updateView() }
+            .onAppear {
+                presenter.updateView()
+            }
         }
     }
 }
@@ -44,8 +46,6 @@ protocol TeamsInteractorInput {
 
 class TeamsInteractor: TeamsInteractorInput {
     func fetchTeams(completion: @escaping ([Team]) -> Void) {
-        // ダミーのJSONデータをここにペースト
-        // サンプルのJSONデータをペースト
 
 
         let teamsAPI = TeamsAPI()
