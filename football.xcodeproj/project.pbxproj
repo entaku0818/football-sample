@@ -18,6 +18,9 @@
 		617529732A5B842B00AE7C6D /* footballUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617529722A5B842B00AE7C6D /* footballUITests.swift */; };
 		617529752A5B842B00AE7C6D /* footballUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617529742A5B842B00AE7C6D /* footballUITestsLaunchTests.swift */; };
 		617529832A5B846A00AE7C6D /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 617529822A5B846A00AE7C6D /* APIKit */; };
+		6182EAA62AA44338001E9FC0 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182EAA52AA44338001E9FC0 /* Teams.swift */; };
+		6182EAA82AA44356001E9FC0 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182EAA72AA44356001E9FC0 /* Request.swift */; };
+		6182EAAA2AA44455001E9FC0 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182EAA92AA44455001E9FC0 /* TeamDetailView.swift */; };
 		61ED98D42A75642B00060406 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D32A75642B00060406 /* api.swift */; };
 		61ED98D72A76700000060406 /* TeamsInteractorCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D62A76700000060406 /* TeamsInteractorCombine.swift */; };
 		61ED98D92A7670D700060406 /* TeamsViewCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D82A7670D700060406 /* TeamsViewCombine.swift */; };
@@ -55,6 +58,9 @@
 		6175296E2A5B842B00AE7C6D /* footballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = footballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		617529722A5B842B00AE7C6D /* footballUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footballUITests.swift; sourceTree = "<group>"; };
 		617529742A5B842B00AE7C6D /* footballUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = footballUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6182EAA52AA44338001E9FC0 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		6182EAA72AA44356001E9FC0 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		6182EAA92AA44455001E9FC0 /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
 		61ED98D32A75642B00060406 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		61ED98D62A76700000060406 /* TeamsInteractorCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsInteractorCombine.swift; sourceTree = "<group>"; };
 		61ED98D82A7670D700060406 /* TeamsViewCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewCombine.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				61642C872A8B049A00E222AC /* TeamsViewAsync.swift */,
+				6182EAA92AA44455001E9FC0 /* TeamDetailView.swift */,
 			);
 			path = async;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 				617529582A5B842A00AE7C6D /* ContentView.swift */,
 				6175295A2A5B842B00AE7C6D /* Assets.xcassets */,
 				61ED98D22A75641800060406 /* network */,
+				6182EAA42AA44313001E9FC0 /* data class */,
 				6175295F2A5B842B00AE7C6D /* football.entitlements */,
 				6175295C2A5B842B00AE7C6D /* Preview Content */,
 			);
@@ -156,10 +164,19 @@
 			path = footballUITests;
 			sourceTree = "<group>";
 		};
+		6182EAA42AA44313001E9FC0 /* data class */ = {
+			isa = PBXGroup;
+			children = (
+				6182EAA52AA44338001E9FC0 /* Teams.swift */,
+			);
+			path = "data class";
+			sourceTree = "<group>";
+		};
 		61ED98D22A75641800060406 /* network */ = {
 			isa = PBXGroup;
 			children = (
 				61ED98D32A75642B00060406 /* api.swift */,
+				6182EAA72AA44356001E9FC0 /* Request.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -309,7 +326,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6182EAA62AA44338001E9FC0 /* Teams.swift in Sources */,
+				6182EAA82AA44356001E9FC0 /* Request.swift in Sources */,
 				61642C882A8B049A00E222AC /* TeamsViewAsync.swift in Sources */,
+				6182EAAA2AA44455001E9FC0 /* TeamDetailView.swift in Sources */,
 				617529592A5B842A00AE7C6D /* ContentView.swift in Sources */,
 				61ED98D92A7670D700060406 /* TeamsViewCombine.swift in Sources */,
 				61ED98D72A76700000060406 /* TeamsInteractorCombine.swift in Sources */,

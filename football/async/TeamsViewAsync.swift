@@ -12,11 +12,15 @@ import Combine
 
 struct TeamsViewAsync: View {
     @ObservedObject var presenter: TeamsPresenterAsync
+    @State private var selectedTeam: Team? = nil
+
 
     var body: some View {
         VStack {
             List(presenter.teams, id: \.id) { team in
-                Text(team.name)
+                NavigationLink(destination: TeamDetailView(team: team), tag: team, selection: $selectedTeam) {
+                    Text(team.name)
+                }
             }
             .onAppear {
                 Task {
@@ -27,6 +31,7 @@ struct TeamsViewAsync: View {
                   }
                 }
             }
+            Spacer()
         }
     }
 }
