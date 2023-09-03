@@ -28,6 +28,34 @@ struct Team: Decodable, Identifiable, Hashable {
         lhs.id == rhs.id
     }
 }
+
+struct TeamDetail: Codable, Identifiable {
+
+    struct Player: Codable, Identifiable {
+        let id: Int
+
+        let name: String
+        let position: String?
+        let dateOfBirth: String
+        let nationality: String?
+        let shirtNumber: Int?
+        let marketValue: Int?
+    }
+
+
+    let id: Int
+    let name: String
+    let shortName: String
+    let tla: String
+    let address: String?
+    let website: String?
+    let founded: Int?
+    let clubColors: String?
+    let venue: String?
+    let squad: [Player]
+}
+
+
 // "teams"に対応するデータ型
 struct TeamsData: Decodable {
     let teams: [Team]

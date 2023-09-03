@@ -18,7 +18,7 @@ struct TeamsViewAsync: View {
     var body: some View {
         VStack {
             List(presenter.teams, id: \.id) { team in
-                NavigationLink(destination: TeamDetailView(team: team), tag: team, selection: $selectedTeam) {
+                NavigationLink(destination: TeamDetailView(team: team, teamId: team.id), tag: team, selection: $selectedTeam) {
                     Text(team.name)
                 }
             }

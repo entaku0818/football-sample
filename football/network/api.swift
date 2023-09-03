@@ -83,6 +83,18 @@ class TeamsAPIAsync {
         }
     }
 
+    // チーム情報取得APIリクエスト
+    func fetchTeamDetail(teamId:Int) async throws -> TeamDetail {
+        let request = TeamDetailRequest(baseURL: baseURL, teamId: teamId, apiKey: apiKey)
+
+        do {
+            let response = try await sendRequest(request)
+            return response
+        } catch {
+            throw APIError.networkError(error)
+        }
+    }
+
     private func sendRequest<T: Request>(_ request: T) async throws -> T.Response {
         do {
             return try await withCheckedThrowingContinuation { continuation in
