@@ -1,0 +1,23 @@
+name: XCTest
+on:
+  push:
+    branches:
+      - main  # テストを実行するブランチを指定
+
+jobs:
+  build-and-test:
+    runs-on: macOS-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Set up Swift
+      uses: actions/setup-swift@v2
+      with:
+        swift-version: 5.5  # プロジェクトに合わせたSwiftバージョンを指定
+    
+    - name: Build and test
+      run: |
+        swift build
+        swift test
