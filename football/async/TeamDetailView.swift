@@ -12,15 +12,19 @@ struct TeamDetailView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            if let imageUrl = URL(string: team.crest) {
-                 AsyncImage(url: imageUrl) { image in
-                     image.resizable()
-                         .aspectRatio(contentMode: .fit)
-                 } placeholder: {
-                     ProgressView()
-                 }
-                 .frame(maxHeight: 150)
-             }
+            HStack(alignment: .center){
+                Spacer()
+                if let imageUrl = URL(string: team.crest) {
+                    AsyncImage(url: imageUrl) { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(maxHeight: 150)
+                }
+                Spacer()
+            }
 
             Text("Team Detail: \(team.name)")
                 .font(.headline)
@@ -31,6 +35,7 @@ struct TeamDetailView: View {
             Text("Founded: \(team.founded ?? 0)")
                 .font(.subheadline)
             // Display other properties as needed
+            Spacer()
         }
         .padding()
     }
