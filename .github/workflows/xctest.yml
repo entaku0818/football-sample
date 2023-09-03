@@ -1,23 +1,25 @@
 name: XCTest
+
 on:
   push:
-    branches:
-      - main  # テストを実行するブランチを指定
+    branches: [ main ]
+  pull_request:
+    branches: [ main, feature/* ]
+
+  workflow_dispatch:
 
 jobs:
-  build-and-test:
+  build:
     runs-on: macOS-latest
-    
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    
-    - name: Set up Swift
-      uses: actions/setup-swift@v2
-      with:
-        swift-version: 5.5  # プロジェクトに合わせたSwiftバージョンを指定
-    
-    - name: Build and test
-      run: |
-        swift build
-        swift test
+      - uses: actions/checkout@v3
+
+      - name: Test
+        run: xcodebuild test -project XCTestExample.xcodeproj/ -scheme XCTestExample -resultBundlePath TestResults -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14"
+        
+      - uses: kishikawakatsumi/xcresulttool@v1
+        with:
+          path: TestResults.xcresult
+        if: success() || failure()
+
