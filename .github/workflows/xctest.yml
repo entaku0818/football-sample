@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Test
-        run: xcodebuild test -project XCTestExample.xcodeproj/ -scheme XCTestExample -resultBundlePath TestResults -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14"
+      run: xcodebuild test -project football.xcodeproj/ -scheme football -resultBundlePath TestResults -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14"
         
       - uses: kishikawakatsumi/xcresulttool@v1
         with:
