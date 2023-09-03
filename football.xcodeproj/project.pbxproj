@@ -21,6 +21,8 @@
 		6182EAA62AA44338001E9FC0 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182EAA52AA44338001E9FC0 /* Teams.swift */; };
 		6182EAA82AA44356001E9FC0 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182EAA72AA44356001E9FC0 /* Request.swift */; };
 		6182EAAA2AA44455001E9FC0 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182EAA92AA44455001E9FC0 /* TeamDetailView.swift */; };
+		6182EAAC2AA45848001E9FC0 /* TeamDetailPresenterAsyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182EAAB2AA45848001E9FC0 /* TeamDetailPresenterAsyncTests.swift */; };
+		6182EAAE2AA458B0001E9FC0 /* MockTeamDetailAPIAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6182EAAD2AA458B0001E9FC0 /* MockTeamDetailAPIAsync.swift */; };
 		61ED98D42A75642B00060406 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D32A75642B00060406 /* api.swift */; };
 		61ED98D72A76700000060406 /* TeamsInteractorCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D62A76700000060406 /* TeamsInteractorCombine.swift */; };
 		61ED98D92A7670D700060406 /* TeamsViewCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ED98D82A7670D700060406 /* TeamsViewCombine.swift */; };
@@ -61,6 +63,8 @@
 		6182EAA52AA44338001E9FC0 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		6182EAA72AA44356001E9FC0 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		6182EAA92AA44455001E9FC0 /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
+		6182EAAB2AA45848001E9FC0 /* TeamDetailPresenterAsyncTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetailPresenterAsyncTests.swift; sourceTree = "<group>"; };
+		6182EAAD2AA458B0001E9FC0 /* MockTeamDetailAPIAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTeamDetailAPIAsync.swift; sourceTree = "<group>"; };
 		61ED98D32A75642B00060406 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		61ED98D62A76700000060406 /* TeamsInteractorCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsInteractorCombine.swift; sourceTree = "<group>"; };
 		61ED98D82A7670D700060406 /* TeamsViewCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewCombine.swift; sourceTree = "<group>"; };
@@ -150,7 +154,9 @@
 			children = (
 				617529682A5B842B00AE7C6D /* footballTests.swift */,
 				616E87BB2A9B4DE800EEBB83 /* TeamsPresenterAsyncTests.swift */,
+				6182EAAB2AA45848001E9FC0 /* TeamDetailPresenterAsyncTests.swift */,
 				616E87BE2A9B4ED400EEBB83 /* MockTeamsAPIAsync.swift */,
+				6182EAAD2AA458B0001E9FC0 /* MockTeamDetailAPIAsync.swift */,
 			);
 			path = footballTests;
 			sourceTree = "<group>";
@@ -343,8 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				616E87BD2A9B4E8700EEBB83 /* TeamsPresenterAsyncTests.swift in Sources */,
+				6182EAAC2AA45848001E9FC0 /* TeamDetailPresenterAsyncTests.swift in Sources */,
 				616E87BF2A9B4ED400EEBB83 /* MockTeamsAPIAsync.swift in Sources */,
 				617529692A5B842B00AE7C6D /* footballTests.swift in Sources */,
+				6182EAAE2AA458B0001E9FC0 /* MockTeamDetailAPIAsync.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
